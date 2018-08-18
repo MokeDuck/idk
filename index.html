@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+</head>
+<script>
+
+function update() {
+
+    var str = document.getElementById("input").value
+
+    var res01 = str.replace(/a/g, "ᚢ");
+
+    var res02 = res01.replace(/b/g, "ᚱ");
+
+    var res03 = res02.replace(/c|k/g, "ᚴ");
+
+    var res04 = res03.replace(/d/g, "ᚫ");
+ 
+    var res05 = res04.replace(/e/g, "ᚺ");
+
+    var res06 = res05.replace(/f/g, "ᛩ");
+
+    var res07 = res06.replace(/g/g, "ᚠ");
+
+    var res08 = res07.replace(/h/g, "ᛣ");
+
+    var res09 = res08.replace(/i/g, "ᛁ");
+
+    var res10 = res09.replace(/j/g, "ᛕ");
+
+    var res11 = res10.replace(/l/g, "ᛅ");
+
+    var res12 = res11.replace(/m/g, "ᛒ");
+
+    var res13 = res12.replace(/n/g, "ᛘ");
+
+    var res14 = res13.replace(/o/g, "Λ");
+
+    var res15 = res14.replace(/p/g, "ᚹ");
+
+    var res16 = res15.replace(/q/g, "ᚴ♢");
+
+    var res17 = res16.replace(/r/g, "ᛏ");
+
+    var res18 = res17.replace(/s/g, "❯");
+
+    var res19 = res18.replace(/t/g, "ᛚ");
+
+    var res20 = res19.replace(/u/g, "ᛟ");
+
+    var res21 = res20.replace(/v/g, "Я");
+
+    var res22 = res21.replace(/w/g, "♢");
+
+    var res23 = res22.replace(/x/g, "ᚴ❯");
+
+    var res24 = res23.replace(/y/g, "ᛋ");
+
+    var res25 = res24.replace(/z/g, "❯");
+
+    
+
+    document.getElementById("output").innerHTML = res25;
+
+}
+
+</script>
+
+<body>
+
+<h1>Dwarf-Rune translator: </h1>
+<p> This will translate normal text into a unicode adaptation of Angerthas Moria from the works of J.R.R. Tolkien </p>
+<input id='input' type='text' oninput='update()'>
+
+<BR>
+
+<span id='output'></span>
+
+
+
+
+</body>
+
+</html>
