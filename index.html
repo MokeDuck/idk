@@ -80,14 +80,15 @@ function update() {
 <span id='output'></span>
 
 <BR>
-
+<canvas id="runeCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
 <BR>
 
-<p> Version 1.2.3
+<p> Version 1.2.4
 
 </body>
 <script>
-var c = document.getElementById("myCanvas");
+var c = document.getElementById("runeCanvas");
 var ctx = c.getContext("2d");
 ctx.font = "30px Arial";
 ctx.fillText("ᚢ ᚺᛅᚱᚺᛏᚺᛚ⅄",20,30);
