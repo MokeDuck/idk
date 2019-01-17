@@ -15,7 +15,7 @@ function update() {
 
     var str = document.getElementById("input").value
 
-    var res01 = str.replace(ᚢ", "a");
+    var res01 = str.replace(/ᚢ/i, "a");
 
     var res02 = res01.replace(/b/gi, "ᚱ");
 
