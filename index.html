@@ -7,7 +7,38 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<style>
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
 
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #000;
+  color: white;
+  font-size: 16px;
+  padding: 12px 12px;
+  border: none;
+  /*cursor: pointer;*/
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+</style>
   </head>
   <body>
         <nav class="navbar navbar-expand-md navbar-light bg-blue fixed-top">
@@ -53,7 +84,10 @@ img {
   height: auto;
 }
 </style>
-    <img src="DuckFather.png" width="1000">
+    <div class="container">
+  <img src="DuckFather.png" style="width:100%">
+  <button class="btn" href="ThePen.html"></button>
+</div>
     <p class="lead"> Hello lonely scholar of the interwebs. Here, you will find the knowledge you do not seek. I tell the story of the Duckfather, the translator of silliness, the transformer of confusion, and The Organization that has opposed him with contradiction and discord since his days have begun. Here I will provide what you need to oppose The Organization, to spread silliness in its purest form, and be ridiculed for the rest of your life.
     </p>
 
