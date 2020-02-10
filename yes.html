@@ -37,20 +37,32 @@
       </h3>
 
       <hr>          
-       
-  <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyDlJzLRr2jkvvHk6ozOOW71OEcyODjf_ak",
-        authDomain: "cicnavi-github-io.firebaseapp.com",
-        databaseURL: "https://cicnavi-github-io.firebaseio.com",
-        projectId: "cicnavi-github-io",
-        storageBucket: "cicnavi-github-io.appspot.com",
-        messagingSenderId: "409780451977"
-      };
-      // Firebase instance.
-      firebase.initializeApp(config);
+  
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCjakwu2GekBJq-CIuNwSvsRuWdsis6ocg",
+    authDomain: "duckfathers-quacks.firebaseapp.com",
+    databaseURL: "https://duckfathers-quacks.firebaseio.com",
+    projectId: "duckfathers-quacks",
+    storageBucket: "duckfathers-quacks.appspot.com",
+    messagingSenderId: "640595631598",
+    appId: "1:640595631598:web:626c5e98ee2ea5210542ff",
+    measurementId: "G-9518WDLB9K"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+      
+
           
       // Database reference to the helloMessage key.
       var helloMessageReference = firebase.database().ref('helloMessage');
