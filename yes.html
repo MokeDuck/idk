@@ -39,8 +39,19 @@
       <hr>          
        
   <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
-  <script>
-  
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDlJzLRr2jkvvHk6ozOOW71OEcyODjf_ak",
+        authDomain: "cicnavi-github-io.firebaseapp.com",
+        databaseURL: "https://cicnavi-github-io.firebaseio.com",
+        projectId: "cicnavi-github-io",
+        storageBucket: "cicnavi-github-io.appspot.com",
+        messagingSenderId: "409780451977"
+      };
+      // Firebase instance.
+      firebase.initializeApp(config);
+          
       // Database reference to the helloMessage key.
       var helloMessageReference = firebase.database().ref('helloMessage');
   
