@@ -51,9 +51,6 @@
 
       <hr>
 
-      <p>
-      <img src="images/RidRKdR4T.png" class="img-responsive" style="margin:0 auto;" alt="Responsive image">
-      </p>
     </div>
     
      <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -81,11 +78,11 @@
 
 
       // Database reference to the helloMessage key.
-      var helloMessageReference = firebase.database().ref('helloMessage');
+      var helloMessageReference = firebase.database().ref(/helloMessage);
 
       // DOM element shortcuts.
       var helloMessageInput = document.getElementById('helloMessageInput');
-      var helloMessageOutput= document.getElementById('helloMessageOutput');
+      var helloMessageOutput = document.getElementById('helloMessageOutput');
       
       // On every value change, refresh related DOM elements.
       helloMessageReference.on('value', function (snapshot) {
@@ -107,7 +104,8 @@
         }
           
         // Use the database reference to set the new value.
-        helloMessageReference.set(helloMessage);
+        helloMessageReference.set('helloMessage');
+        });
       }
     </script>
     
