@@ -62,7 +62,7 @@
 
 <script>
   // Your web app's Firebase configuration
-  var firebaseConfig = {
+  var Config = {
     apiKey: "AIzaSyCjakwu2GekBJq-CIuNwSvsRuWdsis6ocg",
     authDomain: "duckfathers-quacks.firebaseapp.com",
     databaseURL: "https://duckfathers-quacks.firebaseio.com",
@@ -73,7 +73,7 @@
     measurementId: "G-9518WDLB9K"
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(Config);
   firebase.analytics();
 
 
@@ -104,8 +104,8 @@
         }
           
         // Use the database reference to set the new value.
-        helloMessageReference.set('helloMessage');
-        });
+        helloMessageReference.set(helloMessage);
+        
       }
     </script>
     
