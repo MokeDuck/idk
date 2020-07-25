@@ -101,7 +101,7 @@ img {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     
-      
+      <div id="token"></div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
 
@@ -124,6 +124,38 @@ img {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+  
+  // Retrieve firebase messaging obect
+  const messaging = firebase.messaging();
+  
+  messaging.usePublicVapidKey('BMEE9yvkhFxlCADczcRlMCOgeN3iqyP4iWaRNKW6MGkWKPkzMTiV7NuiAupDOcS9SYuk2CEJBwPWKgCLBrkmqAU');
+  
+  messaging.requestPermission().then(function() {
+    console.log('Notification permission granted.');
+    
+    
+    // idk what I'm doing help
+    messaging.getToken().then(function(currentToken) {
+      console.log(currentToken);
+      document.getElementById('token').innerHTML = currentToken;
+    }).catch(function(err) {
+      console.log('An error occored while getting that stupid token thing IDK man help. ', err);
+      showToken('Error retrieving Instance ID token. ', err);
+      setTokenSentToServer(false);
+    });
+    // ...
+  }).catch(function(err) {
+    console.log('unable to get permission to notify loser. ', err);
+  });
+  
+  messaging.onMessage(function(payload) {
+    var obj = JSON.parse(payload.data.notification);
+    var notification = new Notification(obj.title, {
+      icon: obj.icon,
+      body: obj.body
+    });
+    // ...
+  });
 </script>
       
       
