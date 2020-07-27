@@ -1,119 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>  
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>Hello, World!</title>
-    
-    <!-- Bootstrap Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<style>
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 25.5%;
+  left: 49.6%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #000;
+  color: red;
+  font-size: 16px;
+  padding: 0.8% 0.8%;
+  border: none;
+  /*cursor: pointer;*/
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+}
+</style>
   </head>
   <body>
-  
-    <div class="container">
-      <div class="jumbotron">
-        <h1 class="text-center">Hello, world!</h1>
-        <p class="text-center">
-          A simple hello could lead to a million things
-        </p>
-      </div>
-      
-      <!-- Message input field -->
-      <div class="row">
-        <div class="col-xs-12 form-group">
-          <input type="text"
-              class="form-control input-lg"
-              id="helloMessageInput"
-              placeholder="Enter your Hello Message here...">
-        </div>
-      </div>
-      
-      <!-- Send button -->
-      <div class="row">
-        <div class="col-xs-12 form-group">
-          <button class="btn btn-default btn-block btn-lg"
-              onClick="sendHelloMessage()">
-              Send
-          </button>
-        </div>
-      </div>
-
-      <hr>
-
-      <!-- Place to show the latest message from the database -->
-      <h2 class="text-center">Latest Hello Message</h2>
-      <h3 id="helloMessageOutput" class="text-center text-warning">
-        <span class="text-info">Latest message will appear here...</span>
-      </h3>
-
-      <hr>
-
-    </div>
-    
-     <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  var Config = {
-    apiKey: "AIzaSyCjakwu2GekBJq-CIuNwSvsRuWdsis6ocg",
-    authDomain: "duckfathers-quacks.firebaseapp.com",
-    databaseURL: "https://duckfathers-quacks.firebaseio.com",
-    projectId: "duckfathers-quacks",
-    storageBucket: "duckfathers-quacks.appspot.com",
-    messagingSenderId: "640595631598",
-    appId: "1:640595631598:web:626c5e98ee2ea5210542ff",
-    measurementId: "G-9518WDLB9K"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(Config);
-  firebase.analytics();
-
-
-      // Database reference to the helloMessage key.
-      var helloMessageReference = firebase.database().ref("helloMessage");
-
-      // DOM element shortcuts.
-      var helloMessageInput = document.getElementById('helloMessageInput');
-      var helloMessageOutput = document.getElementById('helloMessageOutput');
-      
-      // On every value change, refresh related DOM elements.
-      helloMessageReference.on('value', function (snapshot) {
-        helloMessageOutput.innerText = snapshot.val();
-        helloMessageInput.value = '';
-      });
-
-      // Function to save the new Hello Message to the database.
-      function sendHelloMessage() {
-        // Variable to hold the message.
-        var helloMessage = '';
-        // If no message is entered, set the sad face.
-        // Else, get the entered message.
-        if (helloMessageInput.value.length == 0) {
-          helloMessage = 'No Hello... :(';
-        }
-        else {
-          helloMessage = helloMessageInput.value;
-        }
+        <nav class="navbar navbar-expand-md navbar-light bg-blue fixed-top">
+  <a class="navbar-brand" href="/">
+    <img src="favicon.ico" class="d-inline-block align-top" style="width: 34px; height: 34px;"> Hail The Duckfather </a>
           
-        // Use the database reference to set the new value.
-        helloMessageReference.set(helloMessage);
-        
-      }
-    </script>
-    
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    
-    <!-- Bootstrap Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  </body>
+          
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">|Home|<span class="sr-only">(current)</span></a>
+      </li>
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> |Feathers Descended From Some Passing Duck| </a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" href="SillySong.html"> The Silly Song </a>
+          <a class="dropdown-item" href="ThePen.html"> The Pen </a>
+          <a class="dropdown-item" href="TheSpyglass.html"> The Spyglass </a>
+          <a class="dropdown-item" href="DatabaseTesting.html"> Click this you loser </a>
+          <a class="dropdown-item" href="DuckScribbles.html"> duck scribbles </a>
+        </div>
+      </li>
+    </ul>
+
+    </form>
+  </div>
+</nav>
+
+<main role="main" class="container">
+
+  <div class="starter-template">
+    <BR> <BR>
+    <h1 style="text-align: center">Below is an absolutely undisputed unquestionable fact</h1>
+	<BR> <BR>
+    <style>
+pre {font-size:4pt; letter-spacing:2px; line-height:3pt; font-weight:bold;}
+img {
+  width: 90%;
+  height: auto;
+}
+</style>
+    
+    <h1 id="bigOne"></h1>
+	<p id="ducks">[ducks!]</p>
+	<p id="rats">[rats!]</p>
+	<br><br><br><br><br><br><br>
+	<p id="gus">[bruh]</p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h4> bruh </h3>
+<br><br><br><br><br><br><br><br>
+
+  </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+	<script>
+	// Your web app's Firebase configuration
+	var firebaseConfig = {
+		apiKey: "AIzaSyC_kt8C2WVY5-NelCH2368ISKJYCMgqrVw",
+		authDomain: "duckfatherwebsite.firebaseapp.com",
+		databaseURL: "https://duckfatherwebsite.firebaseio.com",
+		projectId: "duckfatherwebsite",
+		storageBucket: "duckfatherwebsite.appspot.com",
+		messagingSenderId: "378512363534",
+		appId: "1:378512363534:web:5d079ba167130bce74ec5f",
+		measurementId: "G-XN358D4C48"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	firebase.analytics();
+	
+	
+	var bigOne = document.getElementById('bigOne');
+	var dbRef = firebase.database().ref().child('text');
+	dbRef.on('value', snap => bigOne.innerText = snap.val());
+	
+	document.getElementById("ducks").onclick = function() {duckFunction()};
+	document.getElementById("rats").onclick = function() {ratFunction()};
+  document.getElementById("gus").onclick = function() {gusFunction()};
+
+function duckFunction() {
+  firebase.database().ref().set({text: "ducks are the best"});
+}
+function ratFunction() {
+  firebase.database().ref().set({text: "rats are the best"});
+}
+function gusFunction() {
+  firebase.database().ref().set({text: "bruh stop and just viiiiibe maaaaaaan"});
+}
+
+	</script>
+
+</main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
+      
+      
+</body>
 </html>
