@@ -88,10 +88,10 @@ img {
 </style>
     
     <h1 id="bigOne"></h1>
-	<p id="ducks">[ducks!]</p>
-	<p id="rats">[rats!]</p>
+	<button onclick="duckFunction()">Ducks!</button>
+	<button onclick="ratFunction()">Rats!</button>
 	<br><br><br><br><br><br><br>
-	<p id="gus">[bruh]</p>
+	<button onclick="gusFunction()">Bruh...</button>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -128,9 +128,6 @@ img {
 	var dbRef = firebase.database().ref().child('text');
 	dbRef.on('value', snap => bigOne.innerText = snap.val());
 	
-	document.getElementById("ducks").onclick = function() {duckFunction()};
-	document.getElementById("rats").onclick = function() {ratFunction()};
-  document.getElementById("gus").onclick = function() {gusFunction()};
 
 function duckFunction() {
   firebase.database().ref().set({text: "ducks are the best"});
