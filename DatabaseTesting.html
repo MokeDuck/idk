@@ -87,9 +87,11 @@ img {
 }
 </style>
     
-    <h1 id="bigOne"></h1>
+    <h1 title="this text is the same no matter which device views this page" id="displayText"></h1>
 	<button onclick="duckFunction()">Ducks!</button>
 	<button onclick="ratFunction()">Rats!</button>
+	<br><br><br><br><br>
+	<button id="button1" onclick="quackFunction()">quack!</button>
 
   </div>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -117,20 +119,25 @@ img {
 	firebase.analytics();
 	
 	
-	var bigOne = document.getElementById('bigOne');
-	var dbRef = firebase.database().ref().child('text');
-	dbRef.on('value', snap => bigOne.innerText = snap.val());
+	var displayVar = document.getElementById('displayText');
+	var dbRef1 = firebase.database().ref().child('text');
+	dbRef1.on('value', snap => displayVar.innerText = snap.val());
 	
+	var button1Var = document.getElementById('button1');
+	var dbRef2 = firebase.database().ref().child('button1');
+	dbRef2.on('value', snap => button1Var.innerText = snap.val());
 	
-	
+		
 
 function duckFunction() {
-  firebase.database().ref().set({text: "Ducks are the best"});
+  firebase.database().ref().update({text: "Ducks are the best"});
 }
 function ratFunction() {
-  firebase.database().ref().set({text: "Rats are the best"});
+  firebase.database().ref().update({text: "Rats are the best"});
 }
-
+function quackFunction() {
+  firebase.database().ref().update({button1:"quack "+button1Var.innerText});
+}
 	</script>
 
 </main>
