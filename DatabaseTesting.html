@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<!-- saved from url=(0042)https://duckfather.pw/DatabaseTesting.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!doctype html>
+<html lang="en">
+  <head>
     <!-- Required meta tags -->
-    
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./DatabaseTesting3_files/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <style>
 .container {
   position: relative;
@@ -38,11 +38,11 @@
 
 }
 </style>
-  <script type="text/javascript" async="" src="./DatabaseTesting3_files/js"></script><script src="./DatabaseTesting3_files/js(1)" async=""></script></head>
+  </head>
   <body>
         <nav class="navbar navbar-expand-md navbar-light bg-blue fixed-top">
-  <a class="navbar-brand" href="https://duckfather.pw/">
-    <img src="./DatabaseTesting3_files/favicon.ico" class="d-inline-block align-top" style="width: 34px; height: 34px;"> Hail The Duckfather </a>
+  <a class="navbar-brand" href="/">
+    <img src="favicon.ico" class="d-inline-block align-top" style="width: 34px; height: 34px;"> Hail The Duckfather </a>
           
 
           
@@ -53,32 +53,32 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="https://duckfather.pw/index.html">|Home|<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.html">|Home|<span class="sr-only">(current)</span></a>
       </li>
 
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="https://duckfather.pw/DatabaseTesting.html#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> |Feathers Descended From Some Passing Duck| </a>
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> |Feathers Descended From Some Passing Duck| </a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="https://duckfather.pw/SillySong.html"> The Silly Song </a>
-          <a class="dropdown-item" href="https://duckfather.pw/ThePen.html"> The Pen </a>
-          <a class="dropdown-item" href="https://duckfather.pw/TheSpyglass.html"> The Spyglass </a>
-          <a class="dropdown-item" href="https://duckfather.pw/DatabaseTesting.html"> Click this you loser </a>
-          <a class="dropdown-item" href="https://duckfather.pw/DuckScribbles.html"> duck scribbles </a>
+          <a class="dropdown-item" href="SillySong.html"> The Silly Song </a>
+          <a class="dropdown-item" href="ThePen.html"> The Pen </a>
+          <a class="dropdown-item" href="TheSpyglass.html"> The Spyglass </a>
+          <a class="dropdown-item" href="DatabaseTesting.html"> Click this you loser </a>
+          <a class="dropdown-item" href="DuckScribbles.html"> duck scribbles </a>
         </div>
       </li>
     </ul>
 
-    
+    </form>
   </div>
 </nav>
 
 <main role="main" class="container">
 
   <div class="starter-template">
-    <br> <br>
+    <BR> <BR>
     <h1 style="text-align: center">Below is an absolutely undisputed unquestionable fact</h1>
-    <br> <br>
+    <BR> <BR>
     <style>
 pre {font-size:4pt; letter-spacing:2px; line-height:3pt; font-weight:bold;}
 img {
@@ -87,20 +87,18 @@ img {
 }
 </style>
     
-    <h1 title="this text is the same no matter which device views this page" id="displayText"></h1>
+    <h1 id="bigOne"></h1>
 	<button onclick="duckFunction()">Ducks!</button>
 	<button onclick="ratFunction()">Rats!</button>
-	<br><br><br><br><br><br>
-	<button id="button1" onclick="quackFunction()">quack!</button>
 
   </div>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-	<script src="./DatabaseTesting3_files/firebase-app.js.download"></script>
-	<script src="./DatabaseTesting3_files/firebase-firestore.js.download"></script>
-	<script src="./DatabaseTesting3_files/firebase-database.js.download"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
 	<!-- TODO: Add SDKs for Firebase products that you want to use
 		https://firebase.google.com/docs/web/setup#available-libraries -->
-	<script src="./DatabaseTesting3_files/firebase-analytics.js.download"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
 
 	<script>
 	// Your web app's Firebase configuration
@@ -119,25 +117,18 @@ img {
 	firebase.analytics();
 	
 	
-	var displayVar = document.getElementById('displayText');
-	var dbRef1 = firebase.database().ref().child('text');
-	dbRef1.on('value', snap => displayVar.innerText = snap.val());
-	
-	var button1Var = document.getElementById('button1');
-	var dbRef2 = firebase.database().ref().child('button1');
-	dbRef2.on('value', snap => button1Var.innerText = snap.val());
+	var bigOne = document.getElementById('bigOne');
+	var dbRef = firebase.database().ref().child('text');
+	dbRef.on('value', snap => bigOne.innerText = snap.val());
 	
 	
 	
 
 function duckFunction() {
-  firebase.database().ref().update({text:"Ducks are the best"});
+  firebase.database().ref().set({text: "Ducks are the best"});
 }
 function ratFunction() {
-  firebase.database().ref().update({text:"Rats are the best"});
-}
-function quackFunction() {
-  firebase.database().ref().update({button1:"quack "+button1Var.innerText});
+  firebase.database().ref().set({text: "Rats are the best"});
 }
 
 	</script>
@@ -146,12 +137,11 @@ function quackFunction() {
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="./DatabaseTesting3_files/jquery-3.3.1.slim.min.js.download" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="./DatabaseTesting3_files/popper.min.js.download" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="./DatabaseTesting3_files/bootstrap.min.js.download" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     
       
       
-
-
-</body></html>
+</body>
+</html>
