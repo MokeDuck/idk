@@ -36,7 +36,7 @@
 }
 
 
-}
+
 </style>
   </head>
   <body>
@@ -85,11 +85,30 @@ img {
   width: 90%;
   height: auto;
 }
+
+.buttonDuck {
+  border: none;
+  color: white;
+  padding: 15px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 50px;
+  background-color: #4CAF50; /*Green*/
+}
 </style>
     
     <h1 title="this text is the same no matter which device views this page" id="displayText"></h1>
 	<button onclick="duckFunction()">Ducks!</button>
 	<button onclick="ratFunction()">Rats!</button>
+	<br><br><br><br><br>
+	<button class="buttonDuck" id="1a" onclick="_1aFunction()">-</button><button class="buttonDuck" id="1b" onclick="_1bFunction()">-</button><button class="buttonDuck" id="1c" onclick="_1cFunction()">-</button> <br>
+	<button class="buttonDuck" id="2a" onclick="_2aFunction()">-</button><button class="buttonDuck" id="2b" onclick="_2bFunction()">-</button><button class="buttonDuck" id="2c" onclick="_2cFunction()">-</button> <br>
+	<button class="buttonDuck" id="3a" onclick="_3aFunction()">-</button><button class="buttonDuck" id="3b" onclick="_3bFunction()">-</button><button class="buttonDuck" id="3c" onclick="_3cFunction()">-</button> <br>
+	
 	<br><br><br><br><br>
 	<button id="button1" onclick="quackFunction()">quack!</button>
 
@@ -126,6 +145,154 @@ img {
 	var button1Var = document.getElementById('button1');
 	var dbRef2 = firebase.database().ref().child('button1');
 	dbRef2.on('value', snap => button1Var.innerText = snap.val());
+	
+	// These control each function of the TicTacToe board --------------------------------------------------------------------------------------------
+	
+	var _1aVar = document.getElementById('1a');
+	var dbRef1a = firebase.database().ref().child('_1a');
+	dbRef1a.on('value', snap => _1aVar.innerText = snap.val());
+	
+	function _1aFunction() {
+		if (_1aVar.innerText == "| -- |"){
+		firebase.database().ref().update({_1a:"| X |"});
+		}
+		else if (_1aVar.innerText == "| X |") {
+		firebase.database().ref().update({_1a:"| O |"});
+		}
+		else {
+		firebase.database().ref().update({_1a:"| -- |"});
+		}
+	}
+	
+	var _1bVar = document.getElementById('1b');
+	var dbRef1b = firebase.database().ref().child('_1b');
+	dbRef1b.on('value', snap => _1bVar.innerText = snap.val());
+	
+	function _1bFunction() {
+		if (_1bVar.innerText == "| -- |"){
+		firebase.database().ref().update({_1b:"| X |"});
+		}
+		else if (_1bVar.innerText == "| X |") {
+		firebase.database().ref().update({_1b:"| O |"});
+		}
+		else {
+		firebase.database().ref().update({_1b:"| -- |"});
+		}
+	}
+	
+	var _1cVar = document.getElementById('1c');
+	var dbRef1c = firebase.database().ref().child('_1c');
+	dbRef1c.on('value', snap => _1cVar.innerText = snap.val());
+	
+	function _1cFunction() {
+		if (_1cVar.innerText == "| -- |"){
+		firebase.database().ref().update({_1c:"| X |"});
+		}
+		else if (_1cVar.innerText == "| X |") {
+		firebase.database().ref().update({_1c:"| O |"});
+		}
+		else {
+		firebase.database().ref().update({_1c:"| -- |"});
+		}
+	}
+	
+	var _2aVar = document.getElementById('2a');
+	var dbRef2a = firebase.database().ref().child('_2a');
+	dbRef2a.on('value', snap => _2aVar.innerText = snap.val());
+	
+	function _2aFunction() {
+		if (_2aVar.innerText == "| -- |"){
+		firebase.database().ref().update({_2a:"| X |"});
+		}
+		else if (_2aVar.innerText == "| X |") {
+		firebase.database().ref().update({_2a:"| O |"});
+		}
+		else {
+		firebase.database().ref().update({_2a:"| -- |"});
+		}
+	}
+	
+	var _2bVar = document.getElementById('2b');
+	var dbRef2b = firebase.database().ref().child('_2b');
+	dbRef2b.on('value', snap => _2bVar.innerText = snap.val());
+	
+	function _2bFunction() {
+		if (_2bVar.innerText == "| -- |"){
+		firebase.database().ref().update({_2b:"| X |"});
+		}
+		else if (_2bVar.innerText == "| X |") {
+		firebase.database().ref().update({_2b:"| O |"});
+		}
+		else {
+		firebase.database().ref().update({_2b:"| -- |"});
+		}
+	}
+	
+	var _2cVar = document.getElementById('2c');
+	var dbRef2c = firebase.database().ref().child('_2c');
+	dbRef2c.on('value', snap => _2cVar.innerText = snap.val());
+	
+	function _2cFunction() {
+		if (_2cVar.innerText == "| -- |"){
+		firebase.database().ref().update({_2c:"| X |"});
+		}
+		else if (_2cVar.innerText == "| X |") {
+		firebase.database().ref().update({_2c:"| O |"});
+		}
+		else {
+		firebase.database().ref().update({_2c:"| -- |"});
+		}
+	}
+	
+	var _3aVar = document.getElementById('3a');
+	var dbRef3a = firebase.database().ref().child('_3a');
+	dbRef3a.on('value', snap => _3aVar.innerText = snap.val());
+	
+	function _3aFunction() {
+		if (_3aVar.innerText == "| -- |"){
+		firebase.database().ref().update({_3a:"| X |"});
+		}
+		else if (_3aVar.innerText == "| X |") {
+		firebase.database().ref().update({_3a:"| O |"});
+		}
+		else {
+		firebase.database().ref().update({_3a:"| -- |"});
+		}
+	}
+	
+	var _3bVar = document.getElementById('3b');
+	var dbRef3b = firebase.database().ref().child('_3b');
+	dbRef3b.on('value', snap => _3bVar.innerText = snap.val());
+	
+	function _3bFunction() {
+		if (_3bVar.innerText == "| -- |"){
+		firebase.database().ref().update({_3b:"| X |"});
+		}
+		else if (_3bVar.innerText == "| X |") {
+		firebase.database().ref().update({_3b:"| O |"});
+		}
+		else {
+		firebase.database().ref().update({_3b:"| -- |"});
+		}
+	}
+	
+	var _3cVar = document.getElementById('3c');
+	var dbRef3c = firebase.database().ref().child('_3c');
+	dbRef3c.on('value', snap => _3cVar.innerText = snap.val());
+	
+	function _3cFunction() {
+		if (_3cVar.innerText == "| -- |"){
+		firebase.database().ref().update({_3c:"| X |"});
+		}
+		else if (_3cVar.innerText == "| X |") {
+		firebase.database().ref().update({_3c:"| O |"});
+		}
+		else {
+		firebase.database().ref().update({_3c:"| -- |"});
+		}
+	}
+	
+	// End of the TicTacToe board ---------------------------------------------------------------------------------
 	
 		
 
