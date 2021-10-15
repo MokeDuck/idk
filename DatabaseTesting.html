@@ -39,7 +39,7 @@
 
 </style>
   </head>
-  <body>
+  <body onload="usersOnlineFunction(1)" onunload="usersOnlineFunction(-1)">
         <nav class="navbar navbar-expand-md navbar-light bg-blue fixed-top">
   <a class="navbar-brand" href="/">
     <img src="favicon.ico" class="d-inline-block align-top" style="width: 34px; height: 34px;"> Hail The Duckfather </a>
@@ -101,7 +101,7 @@ img {
 }
 </style>
     
-    <h1 title="this text is the same no matter which device views this page" id="displayText"></h1>
+    <h1 title="this text is the same no matter which device views this page" id="displayText">Ducks are the best</h1>
 	<button onclick="duckFunction()">Ducks!</button>
 	<button onclick="ratFunction()">Rats!</button>
 	<br><br><br><br><br>
@@ -109,7 +109,9 @@ img {
 	<button class="buttonDuck" id="2a" onclick="_2aFunction()">-</button><button class="buttonDuck" id="2b" onclick="_2bFunction()">-</button><button class="buttonDuck" id="2c" onclick="_2cFunction()">-</button> <br>
 	<button class="buttonDuck" id="3a" onclick="_3aFunction()">-</button><button class="buttonDuck" id="3b" onclick="_3bFunction()">-</button><button class="buttonDuck" id="3c" onclick="_3cFunction()">-</button> <br>
 	
-	<br><br><br><br><br>
+	<br><br>
+	<p>friends watching: </p><p id="usersOnline">__</p>
+	<br><br><br>
 	<button id="button1" onclick="quackFunction()">quack!</button>
 
   </div>
@@ -145,6 +147,16 @@ img {
 	var button1Var = document.getElementById('button1');
 	var dbRef2 = firebase.database().ref().child('button1');
 	dbRef2.on('value', snap => button1Var.innerText = snap.val());
+	
+	var usersOnlineVar = document.getElementById('usersOnline');
+	var dbRef_usersOnline = firebase.database().ref().child('usersOnline');
+	dbRef_usersOnline.on('value', snap => usersOnlineVar.innerText = snap.val());
+	
+	var usersOnlineNum = Integer.valueOf(usersOnlineVar.innerText)
+	
+	function usersOnlineFunction(comeOrGo) {
+		firebase.database().ref().update({usersOnline: firebase.database.ServerValue.increment(comeOrGo)});
+	}
 	
 	// These control each function of the TicTacToe board --------------------------------------------------------------------------------------------
 	
