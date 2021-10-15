@@ -152,8 +152,6 @@ img {
 	var dbRef_usersOnline = firebase.database().ref().child('usersOnline');
 	dbRef_usersOnline.on('value', snap => usersOnlineVar.innerText = snap.val());
 	
-	var usersOnlineNum = Integer.valueOf(usersOnlineVar.innerText)
-	
 	function usersOnlineFunction(comeOrGo) {
 		firebase.database().ref().update({usersOnline: firebase.database.ServerValue.increment(comeOrGo)});
 	}
