@@ -1,3 +1,3 @@
 # mokeduck.github.io
 some weird website...
-yea I'm not sure either honestly. If you wanna contact me... good luck, the CIA has been trying for years.
+yea I'm not sure either honestly. If you wanna contact me... good luck, they'vebeen trying for years.
