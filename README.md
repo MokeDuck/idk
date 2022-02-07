@@ -1,3 +1,3 @@
 # mokeduck.github.io
 some weird website...
-yea I'm not sure either honestly. If you wanna contact me... good luck, they'vebeen trying for years.
+yea I'm not sure either honestly. If you wanna contact me... good luck, they've been trying for years.
