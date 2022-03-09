@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<style>
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .eyeBtn {
+  position: absolute;
+  top: 25.5%;
+  left: 49.6%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #000;
+  color: white;
+  font-size: 16px;
+  padding: 0.8% 0.8%;
+  border: none;
+  /*cursor: pointer;*/
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .eyeBtn:hover {
+  background-color: black;
+}
+.bg-blue {
+  background-color:white
+}
+</style>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" id="entireNavHeader"></nav>
+
+<main role="main" class="container">
+
+  <div class="starter-template">
+    <BR> <BR> <BR>
+    <h1 style="text-align: center">The Story of The Ducks</h1>
+	<h2> Entry 1: The Orgins of the duckfather.</h2>
+
+
+    <p class="lead"> As you delve into this virtual repository of obvious truths and simple facts, you may begin to suspect what many before have. If you recall back to your childhood, you likely cannot 
+remember hearing the duckfather's loud quacks, echoing through the valleys and the hills, inspiring all that hear it. You also may not remember the wise fellowship of the ducks, as you converse with 
+their kind as they float wisely in their ponds. You may begin to suspect what seems almost impossible: That all these memories (that, as anyone with common sense will tell you, should be commonplace, 
+frequent experiences in any childhood) have been surgically, metaphysically, ironically, or a combination of the five, wiped from your brain. <BR>
+<BR>
+Unfortunately, it's even worse than you suspect. Those memories never existed.<BR>
+<BR>
+Indeed, while the idea that a omeganational secret society funded by duck-hunters and molinists, referred to as the organization of spies, have wiped your memory, may seem like the only logical 
+explanation, you must believe the approved yet sorrowful message of the duckfather: that he and all his other fellow ducks were indeed absent during your childhood and in your memory. I'm so sorry for 
+your loss. <BR>
+<BR>
+With these entries, we in the organiz-, uh, duckfather <del>appropriation</del> <del>assasination</del> appreciation society hope to dispell common myths about the duckfather, and very convincingly
+convince everyone that what we say is very true and not at all fake at all, ever or never or something... whichever of those two means that you shouldn't question what we say very much. We hope that 
+they sound very much like something you'd expect the duckfather to send to you via very trustworthy messanger, because that's actually what they are and not something else. <BR>
+<BR>
+Many Quacks<BR>
+<BR>
+-The Moke-Duck
+    </p> <BR> <BR>
+
+
+
+    <p class="small"> All entries here are approved by the real duckfather, and certianly not a melty fake wax replica of the duckfather. 3/8/2022
+    </p>
+
+  </div>
+
+</main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
+          <!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<!-- token: 6LfX_mAeAAAAAP5uyMQCC2kGaVQUsRaWqkRYkLyQ -->
+  
+  <script>
+	var firebaseConfig = {
+		apiKey: "AIzaSyC_kt8C2WVY5-NelCH2368ISKJYCMgqrVw",
+		authDomain: "duckfatherwebsite.firebaseapp.com",
+		databaseURL: "https://duckfatherwebsite.firebaseio.com",
+		projectId: "duckfatherwebsite",
+		storageBucket: "duckfatherwebsite.appspot.com",
+		messagingSenderId: "378512363534",
+		appId: "1:378512363534:web:5d079ba167130bce74ec5f",
+		measurementId: "G-XN358D4C48"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	firebase.analytics();
+	
+	var NavbarVar = document.getElementById('entireNavHeader');
+	var dbRefNavbar = firebase.database().ref().child('Navbar');
+	dbRefNavbar.on('value', snap => NavbarVar.innerHTML = snap.val());
+	
+  </script>
+  
+      
+</body>
+</html>
