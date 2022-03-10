@@ -140,21 +140,21 @@ function gusFunction() {
 	firebase.analytics();
 	  
 	// emergency navbar update!
-	  firebase.database().ref().update({Navbar:
-"<a class=\"navbar-brand\" href=\"/\"> <img src=\"favicon.ico\" class=\"d-inline-block align-top\" style=\"width: 34px; height: 34px;\"> Hail Duckfather? </a>"+
-"<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\" aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"><span class=\"navbar-toggler-icon\"></span> </button> <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\"> <ul class=\"navbar-nav mr-auto\">"+
-"<li class=\"nav-item active\"><a class=\"nav-link\" href=\"index.html\">(Home)<span class=\"sr-only\">(current)</span></a> </li>"+
-"<li class=\"nav-item dropdown\"><a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"dropdown01\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"> (Feathers Descended From Some Passing Duck) </a> <div class=\"dropdown-menu\" id=\"dropdownPages\" aria-labelledby=\"dropdown01\">"+
-"<a class=\"dropdown-item\" href=\"SillySong.html\"> <img src=\"Referenced_Media/Feather.ico\" class=\"d-inline-block align-top\" style=\"width: 16px; height: 16px;\"> &emsp; The Silly Song </a>" +
-"<a class=\"dropdown-item\" href=\"ThePen.html\"> <img src=\"Referenced_Media/Feather.ico\" class=\"d-inline-block align-top\" style=\"width: 16px; height: 16px;\"> &emsp; The Pen </a>" +
-"<a class=\"dropdown-item\" href=\"TheSpyglass.html\"> <img src=\"Referenced_Media/Feather.ico\" class=\"d-inline-block align-top\" style=\"width: 16px; height: 16px;\"> &emsp; The Spyglass </a>" +
-"<a class=\"dropdown-item\" href=\"DatabaseTesting.html\"> <img src=\"Referenced_Media/Feather.ico\" class=\"d-inline-block align-top\" style=\"width: 16px; height: 16px;\"> &emsp; Fun and Games </a>" +
-"<a class=\"dropdown-item\" href=\"DuckScribbles.html\"> <img src=\"Referenced_Media/Feather.ico\" class=\"d-inline-block align-top\" style=\"width: 16px; height: 16px;\"> &emsp; Duck Scratch (like chicken scratch but with ducks) </a>"+
-"</li>"+
-"<li class=\"nav-item dropdown\"><a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"dropdown01\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"> (The Great Quack) </a> <div class=\"dropdown-menu\" id=\"dropdownPages\" aria-labelledby=\"dropdown01\">"+
-"<a class=\"dropdown-item\" href=\"GreatQuack1.html\"> <img src=\"Referenced_Media/Feather.ico\" class=\"d-inline-block align-top\" style=\"width: 16px; height: 16px;\"> &emsp; Great Quack 1 </a>" +
-"</ul> </form> </div>"
-	});
+//	  firebase.database().ref().update({Navbar:
+//"<a class=\"navbar-brand\" href=\"/\"> <img src=\"favicon.ico\" class=\"d-inline-block align-top\" style=\"width: 34px; height: 34px;\"> Hail Duckfather? </a>"+
+//"<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\" aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"><span class=\"navbar-toggler-icon\"></span> </button> <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\"> <ul class=\"navbar-nav mr-auto\">"+
+//"<li class=\"nav-item active\"><a class=\"nav-link\" href=\"index.html\">(Home)<span class=\"sr-only\">(current)</span></a> </li>"+
+//"<li class=\"nav-item dropdown\"><a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"dropdown01\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"> (Feathers Descended From Some Passing Duck) </a> <div class=\"dropdown-menu\" id=\"dropdownPages\" aria-labelledby=\"dropdown01\">"+
+//"<a class=\"dropdown-item\" href=\"SillySong.html\"> <img src=\"Referenced_Media/Feather.ico\" class=\"d-inline-block align-top\" style=\"width: 16px; height: 16px;\"> &emsp; The Silly Song </a>" +
+//"<a class=\"dropdown-item\" href=\"ThePen.html\"> <img src=\"Referenced_Media/Feather.ico\" class=\"d-inline-block align-top\" style=\"width: 16px; height: 16px;\"> &emsp; The Pen </a>" +
+//"<a class=\"dropdown-item\" href=\"TheSpyglass.html\"> <img src=\"Referenced_Media/Feather.ico\" class=\"d-inline-block align-top\" style=\"width: 16px; height: 16px;\"> &emsp; The Spyglass </a>" +
+//"<a class=\"dropdown-item\" href=\"DatabaseTesting.html\"> <img src=\"Referenced_Media/Feather.ico\" class=\"d-inline-block align-top\" style=\"width: 16px; height: 16px;\"> &emsp; Fun and Games </a>" +
+//"<a class=\"dropdown-item\" href=\"DuckScribbles.html\"> <img src=\"Referenced_Media/Feather.ico\" class=\"d-inline-block align-top\" style=\"width: 16px; height: 16px;\"> &emsp; Duck Scratch (like chicken scratch but with ducks) </a>"+
+//"</li>"+
+//"<li class=\"nav-item dropdown\"><a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"dropdown01\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"> (The Great Quack) </a> <div class=\"dropdown-menu\" id=\"dropdownPages\" aria-labelledby=\"dropdown01\">"+
+//"<a class=\"dropdown-item\" href=\"GreatQuack1.html\"> <img src=\"Referenced_Media/Feather.ico\" class=\"d-inline-block align-top\" style=\"width: 16px; height: 16px;\"> &emsp; Great Quack 1 </a>" +
+//"</ul> </form> </div>"
+//	});
 	var NavbarVar = document.getElementById('entireNavHeader');
 	var dbRefNavbar = firebase.database().ref().child('Navbar');
 	dbRefNavbar.on('value', snap => NavbarVar.innerHTML = snap.val());
